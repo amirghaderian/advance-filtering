@@ -1,4 +1,5 @@
 import Category from "./Category";
 import Colors from "./Colors";
 import Price from "./Price";
-export { Category, Colors, Price };
+import Sidebar from "./Sidebar";
+export { Category, Colors, Price, Sidebar };

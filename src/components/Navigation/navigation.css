@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+.nav {
+  display: flex;
+  border-bottom: 2px solid #f3f3f3;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+  margin: 2rem;
+}
+.profile-container {
+  display: flex;
+  gap: 16px;
+}

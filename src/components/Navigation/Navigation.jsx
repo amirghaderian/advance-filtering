@@ -3,7 +3,7 @@ import "./navigation.css"
 import { AiOutlineProduct, AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai"
 const Navigation = () => {
     return (
-        <nav>
+        <nav className="navigation">
             <div className="nav-container">
                 <input type="text" className="search-input" placeholder="Enter your search shoes" />
             </div>

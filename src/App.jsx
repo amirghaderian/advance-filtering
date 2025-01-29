@@ -1,11 +1,15 @@
-import { Navigation, Products, Recommended } from "./components"
-
+import { Category, Colors, Navigation, Price, Products, Recommended, Sidebar } from "./components"
+import "./app.css"
 const App = () => {
   return (
-    <div>
-      <Navigation />
-      <Products />
-      <Recommended />
+    <div className="container-app">
+      <Sidebar />
+      <div className="main-content">
+        <Navigation />
+        <Recommended />
+        <Products />
+      </div>
+
     </div>
   )
 }
