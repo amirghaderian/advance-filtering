@@ -1,22 +1,24 @@
 import { useState } from "react";
 import "./category.css"
-const Category = () => {
-    const categoryFilter = ["All", "Sneakers", "Flats", "Sandals", "Heels"]
-    const [selectedCategory, setSelectedCategory] = useState("All");
+const Category = ({ selectedCategory, setSelectedCategory }) => {
+    const categoryFilter = [{ value: "AllCategory", title: "All" },
+    { value: "sneakers", title: "Sneakers" }, { value: "flats", title: "Flats" }, { value: "sandals", title: "Sandals" }, { value: "heels", title: "Heels" }]
+
     return (
         <div>   {categoryFilter.map((filter) => (
-            <div key={filter}>
+            <div key={filter.value}>
                 <input
                     type="radio"
-                    id={filter}
+                    id={filter.value}
                     name="category"
                     value={filter}
-                    checked={selectedCategory === filter}
-                    onChange={() => setSelectedCategory(filter)}
+                    checked={selectedCategory === filter.value}
+                    onChange={() => setSelectedCategory(filter.value)}
                 />
-                <label htmlFor={filter}>{filter}</label>
+                <label htmlFor={filter.value}>{filter.title}</label>
             </div>
-        ))}</div>
+        ))}
+        </div>
     )
 }
 

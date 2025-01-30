@@ -1,9 +1,8 @@
-import data from "../../db/data"
 import Card from "../Card"
-const Products = () => {
+const Products = ({ data }) => {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>{data.map((card) => {
-      return <Card card={card} />
+      return <Card card={card} key={card.id} />
     })}  </div>
   )
 }
